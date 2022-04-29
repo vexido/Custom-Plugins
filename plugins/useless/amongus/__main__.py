@@ -13,7 +13,7 @@ from textwrap import wrap
 
 from PIL import Image, ImageDraw, ImageFont
 from requests import get
-from userge import Config, Message, userge
+from userge import config, Message, userge
 
 CLRS = {
     "red": 1,
@@ -93,6 +93,6 @@ async def amongus_gen(text: str, clr: int) -> str:
     image.thumbnail((512, 512))
     output = BytesIO()
     output.name = "imposter.webp"
-    webp_file = os.path.join(Config.DOWN_PATH, output.name)
+    webp_file = os.path.join(config.DOWN_PATH, output.name)
     image.save(webp_file, "WebP")
     return webp_file
