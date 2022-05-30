@@ -1,16 +1,12 @@
 shlex
 ujson
 cairosvg
-coffeehouse
-colour
-deezloader
 emoji-country-flag
 glitch-this
 humanize
 justwatch
 lottie
 tracemoepy==3.8
-validators
 geopy
 prettytable
 newspaper3k
