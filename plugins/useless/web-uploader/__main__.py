@@ -37,7 +37,7 @@ async def web(message: Message):
     else:
         file_name = await message.client.download_media(
             message=message.reply_to_message,
-            file_name=config.DOWN_PATH,
+            file_name=config.Dynamic.DOWN_PATH,
             progress=progress,
             progress_args=(message, "trying to download"),
         )
