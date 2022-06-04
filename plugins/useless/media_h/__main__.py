@@ -3,8 +3,8 @@
 
 
 import time
+import prettytable
 
-from prettytable import PrettyTable
 from userge import Message, userge
 from userge.utils import humanbytes, mention_html, time_formatter
 
@@ -35,7 +35,7 @@ async def media_h(message: Message):
     await message.edit(
         'This process takes soo much F*ing Time 😂 so here\'s a quote 🙆‍♀️\n\n`"All you gotta do is chill out... Let go of control and chill out... Let it be, Trust."`\n- **Esther Hicks**'
     )
-    x = PrettyTable()
+    x = prettytable.PrettyTable()
     media_dict = {}
     # Generate json
     for m in TYPES:
