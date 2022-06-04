@@ -40,11 +40,11 @@ async def ss_gen(message: Message):
         await message.edit("Downloading Video to my Local")
         vid = await message.client.download_media(
             message=replied,
-            file_name=config.DOWN_PATH,
+            file_name=config.Dynamic.DOWN_PATH,
             progress=progress,
             progress_args=(message, "Downloading🧐? W8 plox"),
         )
-        vid_loc = os.path.join(config.DOWN_PATH, os.path.basename(vid))
+        vid_loc = os.path.join(config.Dynamic.DOWN_PATH, os.path.basename(vid))
         should_clean = True
     await message.edit("Compiling Resources")
     meta = XMan(CPR(vid_loc))
